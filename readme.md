@@ -8,35 +8,23 @@
 
 Socket programming is a way of connecting two nodes on a network to  communicate with each other. One socket(node) listens on a particular port for an IP, while the other socket reaches out to the other to form a connection. Server forms the listener socket while client reaches out to the server. 
 
-##### socket type:
+### socket type:
 
 In this project we used the SOCK_STREAM: TCP(reliable, connection oriented) .
 
-#### Client Process & Server Process:
+### Client Process & Server Process:
 
-1. ##### server :
-
-Takes requests from the clients then perform the required processing.
-
+1. #### server :
 - Create a socket with the `socket()` system call.
-
 - Bind the socket to an address (IP + port) using the `bind()` system call.
-
 - Listen for connections with the `listen()` system call.
-
 - Accept a connection with the `accept()` system call then create a thread for the client. This call typically blocks the connection until a client connects with the server.
-
 - Send and receive data using the `read()` and `write()` system calls.
 
 
-2. ##### client :
-
-Typically request to server for information.
-
+2. #### client :
 - Create a socket with the `socket()` system call.
-
 - Connect socket to the address of the server using the `connect()` system call.
-
 - Send and receive data. There are a number of ways to do this, but the simplest way is to use the `read()` and `write()` system calls.
 
   
